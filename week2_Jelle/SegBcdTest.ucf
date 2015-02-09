@@ -1,0 +1,12 @@
+NET "BCD(0)" LOC = N3;
+NET "BCD(1)" LOC = E2;
+NET "BCD(2)" LOC = F3;
+NET "BCD(3)" LOC = G3;
+
+NET "Seg7(6)" LOC = L14;
+NET "Seg7(5)" LOC = H12;
+NET "Seg7(4)" LOC = N14;
+NET "Seg7(3)" LOC = N11;
+NET "Seg7(2)" LOC = P12;
+NET "Seg7(1)" LOC = L13;
+NET "Seg7(0)" LOC = M12;
