@@ -2,7 +2,7 @@
 *
 
 #but not these files
-!week1/
+!week1/*
 !.gitignore
 !.vhd
 !.ucf
