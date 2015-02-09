@@ -1,0 +1,22 @@
+50MHz CLK
+PIN B8
+
+4 bit adder
+	GEMAAKT
+	GETEST
+
+BCD to 7Seg
+	GEMAAKT
+	GETEST
+
+COUNTER
+	GEMAAKT
+	GETEST
+
+2 --> 4 logica --> ROWS
+
+7Seg --> MUX --> A-F
+
+TOP VHDL FILE
+
+
