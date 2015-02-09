@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# PlanAhead v14.4 (64-bit)
+# Build 222254 by xbuild on Tue Dec 18 05:21:09 MST 2012
+# Start of session at: Mon Feb 02 22:25:14 2015
+# Process ID: 7892
+# Log file: D:/Docu_Jelle/School/Avans/TI/Blok7/VHDL/wekelijks/week1/planAhead_run_2/planAhead.log
+# Journal file: D:/Docu_Jelle/School/Avans/TI/Blok7/VHDL/wekelijks/week1/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/Docu_Jelle/School/Avans/TI/Blok7/VHDL/wekelijks/week1/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+set_property iostandard LVCMOS25 [get_ports [list XLXN_9]]
+set_property prohibit 1 [get_sites N3]
+set_property prohibit 0 [get_sites N3]
+startgroup
+set_property package_pin N3 [get_ports XLXN_6]
+endgroup
+startgroup
+set_property package_pin E2 [get_ports XLXN_7]
+endgroup
+set_property iostandard LVCMOS25 [get_ports [list XLXN_7]]
+startgroup
+set_property package_pin F3 [get_ports XLXN_9]
+endgroup
+startgroup
+set_property package_pin G1 [get_ports XLXN_20]
+endgroup
+startgroup
+set_property package_pin P4 [get_ports XLXN_19]
+endgroup
+save_constraints

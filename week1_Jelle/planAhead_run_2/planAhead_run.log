@@ -1,0 +1,83 @@
+
+****** PlanAhead v14.4 (64-bit)
+  **** Build 222254 by xbuild on Tue Dec 18 05:21:09 MST 2012
+    ** Copyright 1986-1999, 2001-2012 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.4/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+Failed to create the layout directory: 'C:\Users\Jelle\AppData\Roaming/Xilinx/PlanAhead\14.4\layouts\application'
+source D:/Docu_Jelle/School/Avans/TI/Blok7/VHDL/wekelijks/week1/pa.fromHdl.tcl
+# create_project -name week1 -dir "D:/Docu_Jelle/School/Avans/TI/Blok7/VHDL/wekelijks/week1/planAhead_run_2" -part xc3s100ecp132-4
+create_project: Time (s): elapsed = 00:00:07 . Memory (MB): peak = 420.645 ; gain = 62.391
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "week1schema.ucf" [current_fileset -constrset]
+Adding file 'D:/Docu_Jelle/School/Avans/TI/Blok7/VHDL/wekelijks/week1/week1schema.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {XOR.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {OR_module.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {AND_module.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {week1schema.vf}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set_property top week1schema $srcset
+# add_files [list {week1schema.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc3s100ecp132-4
+Using Verific elaboration
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "D:/Docu_Jelle/School/Avans/TI/Blok7/VHDL/wekelijks/week1/XOR.vhd" into library work
+Parsing VHDL file "D:/Docu_Jelle/School/Avans/TI/Blok7/VHDL/wekelijks/week1/OR_module.vhd" into library work
+Parsing VHDL file "D:/Docu_Jelle/School/Avans/TI/Blok7/VHDL/wekelijks/week1/AND_module.vhd" into library work
+INFO: [Designutils 20-910] Reading macro library C:/Xilinx/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn
+Parsing EDIF File [C:/Xilinx/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Finished Parsing EDIF File [C:/Xilinx/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Loading clock regions from C:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s100e/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s100e/ClockBuffers.xml
+Loading package from C:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s100e/cp132/Package.xml
+Loading io standards from C:/Xilinx/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from C:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s100e/cp132/SSORules.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/drc.xml
+INFO: [Timing 38-77] Reading timing library C:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+INFO: [Timing 38-34] Done reading timing library C:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+Parsing UCF File [D:/Docu_Jelle/School/Avans/TI/Blok7/VHDL/wekelijks/week1/week1schema.ucf]
+Finished Parsing UCF File [D:/Docu_Jelle/School/Avans/TI/Blok7/VHDL/wekelijks/week1/week1schema.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: b143385f
+open_rtl_design: Time (s): elapsed = 00:00:09 . Memory (MB): peak = 569.484 ; gain = 139.863
+update_compile_order -fileset sim_1
+set_property iostandard LVCMOS25 [get_ports [list XLXN_9]]
+set_property prohibit 1 [get_sites N3]
+set_property prohibit 0 [get_sites N3]
+startgroup
+set_property package_pin N3 [get_ports XLXN_6]
+endgroup
+startgroup
+set_property package_pin E2 [get_ports XLXN_7]
+endgroup
+set_property iostandard LVCMOS25 [get_ports [list XLXN_7]]
+startgroup
+set_property package_pin F3 [get_ports XLXN_9]
+endgroup
+startgroup
+set_property package_pin G1 [get_ports XLXN_20]
+endgroup
+startgroup
+set_property package_pin P4 [get_ports XLXN_19]
+endgroup
+save_constraints
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Mon Feb 02 22:31:29 2015...
+INFO: [Common 17-83] Releasing license: PlanAhead

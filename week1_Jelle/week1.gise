@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="week1.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="AND_module.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="AND_module.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="FULLADDER_model.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="FULLADDER_model.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="OR_module.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="OR_module.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="XOR_module.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="XOR_module.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="netgen"/>
+    <file xil_pn:fileType="FILE_NETGEN_REPORT" xil_pn:name="netgen/synthesis/week1schema_synthesis.nlf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="netgen/synthesis/week1schema_synthesis.v"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_1"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_2"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="week1schema.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="week1schema.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="week1schema.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="week1schema.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="week1schema.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_JHD" xil_pn:name="week1schema.jhd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="week1schema.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="week1schema.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="week1schema.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="week1schema.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="week1schema.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="week1schema.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="week1schema.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="week1schema.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="week1schema.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="week1schema.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="week1schema.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="week1schema.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="week1schema.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="week1schema.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="week1schema.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="week1schema.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="week1schema.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="week1schema.vf"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="week1schema.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="week1schema.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="week1schema_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="week1schema_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="week1schema_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="week1schema_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="week1schema_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="week1schema_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="week1schema_map.xrpt"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="week1schema_map_fpga_editor.log"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="week1schema_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="week1schema_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="week1schema_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="week1schema_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="week1schema_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="week1schema_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="week1schema_usage.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="week1schema_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="week1schema_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1423475676" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1423475676">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1423475679" xil_pn:in_ck="-946458068117333990" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="3967346593946370944" xil_pn:start_ts="1423475676">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="week1schema.vf"/>
+    </transform>
+    <transform xil_pn:end_ts="1423475679" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="8096565413441180080" xil_pn:start_ts="1423475679">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1423475679" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1423475679">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1423475679" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="8866860378581328382" xil_pn:start_ts="1423475679">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1423475679" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="2988080280822507185" xil_pn:start_ts="1423475679">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1423475679" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="2152903864914709114" xil_pn:start_ts="1423475679">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1423475685" xil_pn:in_ck="-5123002863978154337" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="4222510840252661212" xil_pn:start_ts="1423475679">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="week1schema.jhd"/>
+      <outfile xil_pn:name="week1schema.lso"/>
+      <outfile xil_pn:name="week1schema.ngc"/>
+      <outfile xil_pn:name="week1schema.ngr"/>
+      <outfile xil_pn:name="week1schema.prj"/>
+      <outfile xil_pn:name="week1schema.stx"/>
+      <outfile xil_pn:name="week1schema.syr"/>
+      <outfile xil_pn:name="week1schema.xst"/>
+      <outfile xil_pn:name="week1schema_vhdl.prj"/>
+      <outfile xil_pn:name="week1schema_xst.xrpt"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1423475686" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-5800111123713576048" xil_pn:start_ts="1423475685">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1423475690" xil_pn:in_ck="-946458068117339308" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-7290701114024474605" xil_pn:start_ts="1423475686">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="week1schema.bld"/>
+      <outfile xil_pn:name="week1schema.ngd"/>
+      <outfile xil_pn:name="week1schema_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1423475694" xil_pn:in_ck="-946458068117339307" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-1303429204059397298" xil_pn:start_ts="1423475690">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="week1schema.pcf"/>
+      <outfile xil_pn:name="week1schema_map.map"/>
+      <outfile xil_pn:name="week1schema_map.mrp"/>
+      <outfile xil_pn:name="week1schema_map.ncd"/>
+      <outfile xil_pn:name="week1schema_map.ngm"/>
+      <outfile xil_pn:name="week1schema_map.xrpt"/>
+      <outfile xil_pn:name="week1schema_summary.xml"/>
+      <outfile xil_pn:name="week1schema_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1423475701" xil_pn:in_ck="4538055308732314862" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-4078461964484670437" xil_pn:start_ts="1423475694">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="week1schema.ncd"/>
+      <outfile xil_pn:name="week1schema.pad"/>
+      <outfile xil_pn:name="week1schema.par"/>
+      <outfile xil_pn:name="week1schema.ptwx"/>
+      <outfile xil_pn:name="week1schema.unroutes"/>
+      <outfile xil_pn:name="week1schema.xpi"/>
+      <outfile xil_pn:name="week1schema_pad.csv"/>
+      <outfile xil_pn:name="week1schema_pad.txt"/>
+      <outfile xil_pn:name="week1schema_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1423487466" xil_pn:in_ck="-946458068117339439" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="2969983391363831627" xil_pn:start_ts="1423487454">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
+      <outfile xil_pn:name="webtalk.log"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="week1schema.bgn"/>
+      <outfile xil_pn:name="week1schema.bit"/>
+      <outfile xil_pn:name="week1schema.drc"/>
+      <outfile xil_pn:name="week1schema.ut"/>
+    </transform>
+    <transform xil_pn:end_ts="1422913693" xil_pn:in_ck="-946458068117352293" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="820969946832651384" xil_pn:start_ts="1422913693">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1422913662" xil_pn:in_ck="-946458068117352293" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="2182533642587968765" xil_pn:start_ts="1422913659">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1422913689" xil_pn:in_ck="-946458068117352293" xil_pn:name="TRAN_genImpactFile" xil_pn:prop_ck="492826547926714055" xil_pn:start_ts="1422913684">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1423475701" xil_pn:in_ck="-946458068117339439" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1423475698">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="week1schema.twr"/>
+      <outfile xil_pn:name="week1schema.twx"/>
+    </transform>
+    <transform xil_pn:end_ts="1422993691" xil_pn:in_ck="-946458068117339308" xil_pn:name="TRAN_postSynthesisSimModel" xil_pn:prop_ck="-6341162380147452741" xil_pn:start_ts="1422993687">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
+    </transform>
+  </transforms>
+
+</generated_project>

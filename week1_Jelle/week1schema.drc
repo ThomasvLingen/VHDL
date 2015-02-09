@@ -1,0 +1,8 @@
+Release 14.4 Drc P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Mon Feb 09 14:10:58 2015
+
+drc -z week1schema.ncd week1schema.pcf
+
+DRC detected 0 errors and 0 warnings.

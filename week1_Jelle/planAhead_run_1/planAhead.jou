@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.4 (64-bit)
+# Build 222254 by xbuild on Tue Dec 18 05:21:09 MST 2012
+# Start of session at: Mon Feb 02 22:24:52 2015
+# Process ID: 1392
+# Log file: D:/Docu_Jelle/School/Avans/TI/Blok7/VHDL/wekelijks/week1/planAhead_run_1/planAhead.log
+# Journal file: D:/Docu_Jelle/School/Avans/TI/Blok7/VHDL/wekelijks/week1/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/Docu_Jelle/School/Avans/TI/Blok7/VHDL/wekelijks/week1/pa.fromNetlist.tcl

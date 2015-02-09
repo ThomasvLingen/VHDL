@@ -1,0 +1,95 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.4
+//  \   \         Application : sch2hdl
+//  /   /         Filename : week1schema.vf
+// /___/   /\     Timestamp : 02/09/2015 10:54:37
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog D:/Docu_Jelle/School/Avans/TI/Blok7/VHDL/wekelijks/week1/week1schema.vf -w D:/Docu_Jelle/School/Avans/TI/Blok7/VHDL/wekelijks/week1/week1schema.sch
+//Design Name: week1schema
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module week1schema(XLXN_39, 
+                   XLXN_40, 
+                   XLXN_41, 
+                   XLXN_42, 
+                   XLXN_43, 
+                   XLXN_44, 
+                   XLXN_45, 
+                   XLXN_46, 
+                   XLXN_92, 
+                   XLXN_47, 
+                   XLXN_48, 
+                   XLXN_49, 
+                   XLXN_50, 
+                   XLXN_51, 
+                   XLXN_93);
+
+   (* LOC = "P11" *) 
+    input XLXN_39;
+   (* LOC = "G3" *) 
+    input XLXN_40;
+   (* LOC = "L3" *) 
+    input XLXN_41;
+   (* LOC = "F3" *) 
+    input XLXN_42;
+   (* LOC = "K3" *) 
+    input XLXN_43;
+   (* LOC = "E2" *) 
+    input XLXN_44;
+   (* LOC = "B4" *) 
+    input XLXN_45;
+   (* LOC = "N3" *) 
+    input XLXN_46;
+   (* LOC = "A7" *) 
+    input XLXN_92;
+   (* LOC = "M5" *) 
+   output XLXN_47;
+   (* LOC = "M11" *) 
+   output XLXN_48;
+   (* LOC = "P7" *) 
+   output XLXN_49;
+   (* LOC = "P6" *) 
+   output XLXN_50;
+   (* LOC = "N5" *) 
+   output XLXN_51;
+   (* LOC = "G1" *) 
+   output XLXN_93;
+   
+   wire XLXN_35;
+   wire XLXN_36;
+   wire XLXN_37;
+   
+   FULLADDER_model  XLXI_12 (.A(XLXN_41), 
+                            .B(XLXN_42), 
+                            .Ci(XLXN_35), 
+                            .C(XLXN_36), 
+                            .S(XLXN_48));
+   FULLADDER_model  XLXI_13 (.A(XLXN_39), 
+                            .B(XLXN_40), 
+                            .Ci(XLXN_92), 
+                            .C(XLXN_35), 
+                            .S(XLXN_47));
+   FULLADDER_model  XLXI_14 (.A(XLXN_43), 
+                            .B(XLXN_44), 
+                            .Ci(XLXN_36), 
+                            .C(XLXN_37), 
+                            .S(XLXN_49));
+   FULLADDER_model  XLXI_15 (.A(XLXN_45), 
+                            .B(XLXN_46), 
+                            .Ci(XLXN_37), 
+                            .C(XLXN_51), 
+                            .S(XLXN_50));
+   GND  XLXI_32 (.G(XLXN_93));
+endmodule
