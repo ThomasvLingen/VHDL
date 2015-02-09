@@ -4,6 +4,6 @@
 #but not these files
 !/week1
 !.gitignore
-!.vhd
-!.ucf
-!.todo
+!*.vhd
+!*.ucf
+!*.todo
