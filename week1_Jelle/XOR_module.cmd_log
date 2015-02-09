@@ -1,2 +1,0 @@
-vhdtdtfi -lib work XOR.vhd -prj week1 -o XOR_module.spl -module XOR_module -template C:/Xilinx/14.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e XOR_module.spl D:/Docu_Jelle/School/Avans/TI/Blok7/VHDL/wekelijks/week1/XOR_module.sym 
