@@ -2,6 +2,34 @@
 *
 
 #but not these files
+!/week1_Jelle
+!/week1_Thomas
+
+!/week2_Jelle
+!/week2_Thomas
+
+!/week3_Jelle
+!/week3_Thomas
+
+!/week4_Jelle
+!/week4_Thomas
+
+!/week5_Jelle
+!/week5_Thomas
+
+!/week6_Jelle
+!/week6_Thomas
+
+!/week7_Jelle
+!/week7_Thomas
+
+!/week8_Jelle
+!/week8_Thomas
+
+!/week9_Jelle
+!/week9_Thomas
+
+
 !.gitignore
 !*.vhd
 !*.ucf
