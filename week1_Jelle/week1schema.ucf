@@ -1,0 +1,19 @@
+
+# PlanAhead Generated IO constraints 
+
+NET "XLXN_9" IOSTANDARD = LVCMOS25;
+
+# PlanAhead Generated physical constraints 
+
+NET "XLXN_6" LOC = N3;
+NET "XLXN_7" LOC = E2;
+
+# PlanAhead Generated IO constraints 
+
+NET "XLXN_7" IOSTANDARD = LVCMOS25;
+
+# PlanAhead Generated physical constraints 
+
+NET "XLXN_9" LOC = F3;
+NET "XLXN_20" LOC = G1;
+NET "XLXN_19" LOC = P4;
