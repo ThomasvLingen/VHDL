@@ -1,0 +1,17 @@
+NET "a0" LOC = N3;
+NET "a1" LOC = E2;
+NET "a2" LOC = F3;
+NET "a3" LOC = G3;
+
+NET "b0" LOC = B4;
+NET "b1" LOC = K3;
+NET "b2" LOC = L3;
+NET "b3" LOC = P11;
+
+NET "out0" LOC = G1;
+NET "out1" LOC = P4;
+NET "out2" LOC = N4;
+NET "out3" LOC = N5;
+NET "C_out" LOC = P6;
+
+NET "C_in" LOC = A7;
