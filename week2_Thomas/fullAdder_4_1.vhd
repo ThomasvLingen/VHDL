@@ -33,8 +33,8 @@ entity fullAdder_4_1 is
     Port ( a : in STD_LOGIC_VECTOR(3 downto 0);
 			  b : in STD_LOGIC_VECTOR(3 downto 0);
            Cin : in  STD_LOGIC;
-           Cout : in  STD_LOGIC_VECTOR(3 downto 0);
-           sum : in  STD_LOGIC_VECTOR(3 downto 0));
+           Cout : out  STD_LOGIC_VECTOR(3 downto 0);
+           sum : out  STD_LOGIC_VECTOR(3 downto 0));
 end fullAdder_4_1;
 
 architecture Behavioral of fullAdder_4_1 is
@@ -52,10 +52,10 @@ architecture Behavioral of fullAdder_4_1 is
 
 	begin
 
-		ADDER0: fullAdder port map(a(0), b(0), Cin, sum(0), Cout0);
-		ADDER1: fullAdder port map(a(1), b(1), CoutSig(0), sum(1), Cout1);
-		ADDER2: fullAdder port map(a(2), b(2), CoutSig(1), sum(2), Cout2);
-		ADDER3: fullAdder port map(a(3), b(3), CoutSig(2), sum(3), Cout);
+		ADDER0: fullAdder port map(a(0), b(0), Cin, sum(0), CoutSig(0));
+		ADDER1: fullAdder port map(a(1), b(1), CoutSig(0), sum(1), CoutSig(1));
+		ADDER2: fullAdder port map(a(2), b(2), CoutSig(1), sum(2), CoutSig(2));
+		ADDER3: fullAdder port map(a(3), b(3), CoutSig(2), sum(3), Cout(0));
 		
-end Behavioral;
+	end Behavioral;
 
