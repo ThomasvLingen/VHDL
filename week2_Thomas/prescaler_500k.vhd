@@ -42,7 +42,7 @@ architecture Behavioral of prescaler_500k is
 		prescaleProcess : process(CLK_in)
 		begin
 			if rising_edge(CLK_in) then
-				if prescaleCounter = 500000 then
+				if prescaleCounter = 50000 then
 					prescaleCounter <= (others=>'0');
 					PRESCALE_out <= '1';
 				else
