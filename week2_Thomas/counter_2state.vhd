@@ -37,7 +37,7 @@ end counter_2state;
 
 architecture Behavioral of counter_2state is
 	
-	constant PRESCALE10MS : integer := 10;
+	constant PRESCALE1MS : integer := 1;
 	signal cnt2 : STD_LOGIC_VECTOR(7 downto 0);
 	signal cnt : STD_LOGIC := '0';
 	begin
@@ -48,7 +48,7 @@ architecture Behavioral of counter_2state is
 			
 				cnt2 <= cnt2 + 1;
 				
-				if cnt2 = PRESCALE10MS then
+				if cnt2 = PRESCALE1MS then
 						cnt2 <= (others=>'0');
 						cnt <= NOT(cnt);
 				end if;
