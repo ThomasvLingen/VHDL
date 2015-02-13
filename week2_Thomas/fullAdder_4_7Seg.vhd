@@ -19,6 +19,7 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -77,15 +78,24 @@ architecture Behavioral of fullAdder_4_7Seg is
 		ADDER_BCD : fullAdder_4_BCD port map(input0, input1, C_in, BCD0, BCD1);
 		COUNTER : ms_counter port map(CLK_in, CNTR_out);
 		
-		--Rows for 7Seg displays
-		Rows(0) <= CNTR_out;
-		Rows(1) <= not CNTR_out;
-			--Turns off the rows that we don't use
-		Rows(2) <= '1';
-		Rows(3) <= '1';
-		
 		MUX : MUX_2Chan_BCD port map(BCD0, BCD1, CNTR_out, BCD_out);
 		
 		BCDTO7SEG : bcdTo7SegDecoder port map(BCD_out, Seg7);
+		
+		--Rows for 7Seg displays
+		Rows(0) <= CNTR_out;
+		
+		process(BCD_out)
+		begin
+			if BCD_out > 0 then
+				Rows(1) <= not CNTR_out;
+			else
+				Rows(1) <= '1';
+			end if; 
+		end process;
+		
+			--Turns off the rows that we don't use
+		Rows(2) <= '1';
+		Rows(3) <= '1';
 	end Behavioral;
 
