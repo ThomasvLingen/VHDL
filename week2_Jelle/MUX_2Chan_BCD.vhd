@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    13:46:31 02/09/2015 
+-- Create Date:    00:42:55 02/13/2015 
 -- Design Name: 
--- Module Name:    fullAdder - Behavioral 
+-- Module Name:    MUX_2Chan_BCD - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,23 +29,28 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity fullAdder is
-    Port ( a : in  STD_LOGIC;
-           b : in  STD_LOGIC;
-           Cin : in  STD_LOGIC;
-           S : out  STD_LOGIC;
-           Cout : out  STD_LOGIC);
-end fullAdder;
+entity MUX_2Chan_BCD is
+    Port ( BCD_in0 : in  STD_LOGIC_VECTOR(3 downto 0);
+           BCD_in1 : in  STD_LOGIC_VECTOR(3 downto 0);
+           sel : in  STD_LOGIC;
+           BCD_out : out  STD_LOGIC_VECTOR(3 downto 0));
+end MUX_2Chan_BCD;
 
-architecture Behavioral of fullAdder is
-	signal x : STD_LOGIC := '0';
+architecture Behavioral of MUX_2Chan_BCD is
+
 	begin
-
-		x <= a xor b;
-	
-		--Outputs
-		s <= x xor Cin;
-		Cout <= (a and b) xor (x and Cin);
+		process(sel, BCD_in0, BCD_in1)
+		begin
+			case sel is
+				when '0' =>
+					BCD_out <= BCD_in0;
+				when '1' =>
+					BCD_out <= BCD_in1;
+				when others =>
+					BCD_out <= "1111";
+					
+			end case;
+		end process;
 
 	end Behavioral;
 

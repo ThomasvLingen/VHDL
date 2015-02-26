@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    16:41:14 02/09/2015 
+-- Create Date:    16:18:04 02/09/2015 
 -- Design Name: 
 -- Module Name:    counter - Behavioral 
 -- Project Name: 
@@ -30,14 +30,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity counter is
-    Port ( CLK_in : in  STD_LOGIC;
-           CNTR_out : out  STD_LOGIC);
+    Port ( clk : in  STD_LOGIC
+			  count : out STD_LOGIC));
 end counter;
 
 architecture Behavioral of counter is
 
-begin
-
-
-end Behavioral;
+	begin
+		
+	end Behavioral;
 

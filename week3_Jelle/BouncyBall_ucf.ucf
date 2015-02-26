@@ -1,0 +1,8 @@
+NET "clk25" LOC = M6;
+
+NET "red" LOC = F13;
+NET "green" LOC = G14;
+NET "blue" LOC = J13;
+
+NET "hsync" LOC = J14;
+NET "vsync" LOC = K13;

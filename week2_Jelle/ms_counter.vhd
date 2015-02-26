@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    13:46:31 02/09/2015 
+-- Create Date:    16:39:42 02/09/2015 
 -- Design Name: 
--- Module Name:    fullAdder - Behavioral 
+-- Module Name:    ms_counter - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,23 +29,29 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity fullAdder is
-    Port ( a : in  STD_LOGIC;
-           b : in  STD_LOGIC;
-           Cin : in  STD_LOGIC;
-           S : out  STD_LOGIC;
-           Cout : out  STD_LOGIC);
-end fullAdder;
+entity ms_counter is
+    Port ( CLK_in : in  STD_LOGIC;
+           CNTR_out : out  STD_LOGIC);
+end ms_counter;
 
-architecture Behavioral of fullAdder is
-	signal x : STD_LOGIC := '0';
-	begin
+architecture Behavioral of ms_counter is
 
-		x <= a xor b;
+	component prescaler_500k Port (
+		CLK_in : in  STD_LOGIC;
+      PRESCALE_out : out  STD_LOGIC);
+	end component;
 	
-		--Outputs
-		s <= x xor Cin;
-		Cout <= (a and b) xor (x and Cin);
+	component counter_2state Port (
+		 CLK_in : in  STD_LOGIC;
+       CNTR_out : out  STD_LOGIC);
+	end component;
 
+	signal prescale : STD_LOGIC := '0';
+
+	begin
+	
+		PRESCALER : prescaler_500k port map(CLK_in, prescale);
+		COUNTER : counter_2state port map(prescale, CNTR_out);
+	
 	end Behavioral;
 
