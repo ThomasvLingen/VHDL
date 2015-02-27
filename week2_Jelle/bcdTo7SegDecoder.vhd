@@ -65,5 +65,5 @@ architecture Behavioral of bcdTo7SegDecoder is
 			end case;
 		end process;
 	
-end Behavioral;
+	end Behavioral;
 

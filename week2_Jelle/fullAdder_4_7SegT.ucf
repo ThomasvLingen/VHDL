@@ -1,0 +1,26 @@
+NET "input0[0]" LOC = P11;
+NET "input0[1]" LOC = L3;
+NET "input0[2]" LOC = K3;
+NET "input0[3]" LOC = B4;
+
+NET "input1[0]" LOC = G3;
+NET "input1[1]" LOC = F3;
+NET "input1[2]" LOC = E2;
+NET "input1[3]" LOC = N3;
+
+NET "C_in" LOC = A7;
+
+NET "CLK_in" LOC = B8;
+
+NET "Seg7[6]" LOC = L14;
+NET "Seg7[5]" LOC = H12;
+NET "Seg7[4]" LOC = N14;
+NET "Seg7[3]" LOC = N11;
+NET "Seg7[2]" LOC = P12;
+NET "Seg7[1]" LOC = L13;
+NET "Seg7[0]" LOC = M12;
+
+NET "Rows[0]" LOC = F12;
+NET "Rows[1]" LOC = J12;
+NET "Rows[2]" LOC = M13;
+NET "Rows[3]" LOC = K14;

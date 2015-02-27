@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    13:46:31 02/09/2015 
+-- Create Date:    11:43:58 02/26/2015 
 -- Design Name: 
--- Module Name:    fullAdder - Behavioral 
+-- Module Name:    BlockPosition - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,23 +29,23 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity fullAdder is
-    Port ( a : in  STD_LOGIC;
-           b : in  STD_LOGIC;
-           Cin : in  STD_LOGIC;
-           S : out  STD_LOGIC;
-           Cout : out  STD_LOGIC);
-end fullAdder;
+entity BlockPosition is
+    Port(
+		clk25 : in  STD_LOGIC;
+      blockX1, blockX2 : out  STD_LOGIC_VECTOR(9 downto 0) := "0000000000";
+      blockY1, blockY2 : out  STD_LOGIC_VECTOR(9 downto 0) := "0000000000"
+	);
+end BlockPosition;
 
-architecture Behavioral of fullAdder is
-	signal x : STD_LOGIC := '0';
+architecture Behavioral of BlockPosition is
+
+begin
+	process (clk25) 
 	begin
-
-		x <= a xor b;
-	
-		--Outputs
-		s <= x xor Cin;
-		Cout <= (a and b) xor (x and Cin);
-
-	end Behavioral;
+		blockX1 <= "0111001011";
+		blockX2 <= "0111010101";
+		blockY1 <= "0100001010";
+		blockY2 <= "0100010100";
+	end process;
+end Behavioral;
 
