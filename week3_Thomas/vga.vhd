@@ -19,10 +19,10 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use ieee.numeric_std.ALL;
 
 entity VGA is
-    Port ( clk50 : in STD_LOGIC;
+    Port ( clk25 : in STD_LOGIC;
 			  x, y : in STD_LOGIC_VECTOR(9 downto 0);
-			  red, green : out  STD_LOGIC_VECTOR(2 downto 0);
-			  blue : out STD_LOGIC_VECTOR(1 downto 0);
+			  red, green : out  STD_LOGIC_VECTOR(2 downto 0) := "000";
+			  blue : out STD_LOGIC_VECTOR(1 downto 0) := "00";
            hsync, vsync : out  STD_LOGIC);
 end VGA;
 
@@ -38,14 +38,14 @@ begin
 	width <= std_logic_vector(to_unsigned(25, width'length));
 	height <= std_logic_vector(to_unsigned(25, height'length));
 
-process (clk50) 
+process (clk25) 
 begin	
-	if rising_edge(clk50) then
+	if rising_edge(clk25) then
 		if (hcount >= 144) and (hcount < 784) and (vcount >= 31) and (vcount < 511) then
 			if(hcount >= 144+x) and (hcount < 144+x+width) and (vcount >= 31+y) and (vcount < 31+y+height) then
-				red <= "100";
-				green <= "100";
-				blue <= "11";
+				red <= "000";
+				green <= "110";
+				blue <= "00";
 			else
 				red <= "010";
 				green <= "000";

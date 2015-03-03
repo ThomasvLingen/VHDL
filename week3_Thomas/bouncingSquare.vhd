@@ -30,29 +30,29 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity bouncingSquare is
-    Port ( clk50 : in  STD_LOGIC;
+    Port ( clk25 : in  STD_LOGIC;
 			  R, G: out STD_LOGIC_VECTOR(2 downto 0);
 			  B : out STD_LOGIC_VECTOR(1 downto 0);
 			  hsync, vsync : out STD_LOGIC);
 end bouncingSquare;
 
 architecture Behavioral of bouncingSquare is
-	component VGA Port ( clk50 : in STD_LOGIC;
+	component VGA Port ( clk25 : in STD_LOGIC;
 		x, y : in STD_LOGIC_VECTOR(9 downto 0);
 		red, green : out  STD_LOGIC_VECTOR(2 downto 0);
 		blue : out STD_LOGIC_VECTOR(1 downto 0);
 		hsync, vsync : out  STD_LOGIC);
 	end component;
 	
-	component positionSelector Port ( clk25 : in STD_LOGIC;
-	x, y : out  STD_LOGIC_VECTOR(9 downto 0));
+	component positionSelector Port ( x, y : out  STD_LOGIC_VECTOR(9 downto 0);
+			  clk25 : in STD_LOGIC);
 	end component;
 	
 	signal x, y : STD_LOGIC_VECTOR(9 downto 0);
 begin
 
-	POS : positionSelector port map(clk50, x, y);
-	VGAOUTPUT : VGA port map(clk50, x, y, R, G, B, hsync, vsync);
+	POS : positionSelector port map(x, y, clk25);
+	VGAOUTPUT : VGA port map(clk25, x, y, R, G, B, hsync, vsync);
 
 end Behavioral;
 

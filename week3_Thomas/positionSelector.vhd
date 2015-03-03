@@ -34,55 +34,56 @@ entity positionSelector is
 end positionSelector;
 
 architecture Behavioral of positionSelector is
-	signal prescale : STD_LOGIC_VECTOR(19 downto 0) := (others => '0');
 	signal right, down : std_logic := '1';
-	signal step : STD_LOGIC_VECTOR(3 downto 0) := "0011";
 	
-	signal tempx : STD_LOGIC_VECTOR(9 downto 0) := "0011000110";
-	signal tempy : STD_LOGIC_VECTOR(9 downto 0) := "0000000000";
 begin
 	process(clk25)
+		variable prescale : STD_LOGIC_VECTOR(19 downto 0) := (others => '0');
+		variable tempx : STD_LOGIC_VECTOR(9 downto 0) := "0011000110";
+		variable tempy : STD_LOGIC_VECTOR(9 downto 0) := "0000000000";
+		
+		constant step : STD_LOGIC_VECTOR(3 downto 0) := "0001";
 	begin
 	if rising_edge(clk25) then
-		if prescale = 416666 then
+		if prescale = 125000 then
 			if right = '1' then
-				tempx <= tempx + step;
+				tempx := tempx + step;
 			else
-				tempx <= tempx - step;
+				tempx := tempx - step;
 			end if;
 			
 			if down = '1' then
-				tempy <= tempy + step;
+				tempy := tempy + step;
 			else
-				tempy <= tempy - step;
+				tempy := tempy - step;
 			end if;
 			
 			if tempx >= 640 - 25 then
 				right <= '0';
-				tempx <= tempx - step;
+				tempx := tempx - step;
 			end if;
 			if tempx <= 0 then
 				right <= '1';
-				tempx <= tempx + step;
+				tempx := tempx + step;
 			end if;
 			
 			if tempy >= 480 - 25 then
 				down <= '0';
-				tempy <= tempy - step;
+				tempy := tempy - step;
 			end if;
 			if tempy <= 0 then
 				down <= '1';
-				tempy <= tempy + step;
+				tempy := tempy + step;
 			end if;
-			x <= tempx;
-			y <= tempy;
-			prescale <= (others => '0');
+
+			prescale := (others => '0');
 		end if;
-		prescale <= prescale + 1;
+		prescale := prescale + 1;
+		
+		x <= tempx;
+		y <= tempy;
 	end if;
 	end process;
-	
-	
 	
 end Behavioral;
 

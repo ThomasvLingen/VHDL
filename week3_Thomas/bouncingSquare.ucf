@@ -1,4 +1,4 @@
-NET "clk50" LOC = M6;
+NET "clk25" LOC = M6;
 
 NET "R[0]" LOC = C14;
 NET "R[1]" LOC = D13;
