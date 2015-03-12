@@ -1,2 +1,3 @@
 NET "clk25" LOC = M6;
-NET "audio_out" LOC = B2;
+NET "audio_outR" LOC = B2;
+NET "audio_outL" LOC = A3;

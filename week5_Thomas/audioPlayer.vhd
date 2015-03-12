@@ -32,7 +32,8 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity audioPlayer is
     Port ( clk25 : in  STD_LOGIC;
-			  audio_out: out STD_LOGIC);
+			  audio_outR: out STD_LOGIC;
+			  audio_outL: out STD_LOGIC);
 end audioPlayer;
 
 architecture Behavioral of audioPlayer is
@@ -51,10 +52,12 @@ architecture Behavioral of audioPlayer is
 	
 	signal sampleCounter : STD_LOGIC_VECTOR(11 downto 0) := (others => '0');
 	signal soundByte : STD_LOGIC_VECTOR(7 downto 0);
+	signal audio_out : STD_LOGIC := '0';
 begin
 
 	SB : soundByteSelector port map(sampleCounter, clk25, soundByte);
 	PL : player port map(sampleCounter, soundByte, clk25, audio_out);
+	
 	process(clk25) begin
 		if (rising_edge(clk25)) then
 			if (sampleCounter >= 3125) then
@@ -62,6 +65,8 @@ begin
 			else
 				sampleCounter <= sampleCounter + 1;
 			end if;
+			audio_outR <= audio_out;
+			audio_outL <= audio_out;
 		end if;
 	end process;
 end Behavioral;
