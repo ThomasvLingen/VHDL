@@ -19,6 +19,7 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -30,7 +31,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity soundByteSelector is
-    Port ( sampleCounter : in  STD_LOGIC;
+    Port ( sampleCounter : in  STD_LOGIC_VECTOR(11 downto 0);
 			  clk25 : in STD_LOGIC;
            soundByte : out  STD_LOGIC_VECTOR(7 downto 0));
 end soundByteSelector;
@@ -39,7 +40,7 @@ architecture Behavioral of soundByteSelector is
 
 begin
 
-	process(sampleCounter)
+	process(clk25, sampleCounter)
 		variable currentByte : integer := 0;
 		type RomType is array (natural range <>) of std_logic_vector(7 downto 0);
 		
@@ -465,7 +466,7 @@ begin
 		X"82", X"82", X"82", X"82", X"82", X"82", X"82", X"82", X"82", X"82", X"82", X"82");
 	begin
 		if rising_edge(clk25) then
-			if(sampleCounter = 3125) then
+			if(sampleCounter >= 3125) then
 				if(currentByte > soundLength) then
 					currentByte := 0;
 				end if;

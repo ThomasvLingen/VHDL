@@ -19,6 +19,7 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -30,14 +31,38 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity audioPlayer is
-    Port ( clk25 : in  STD_LOGIC
+    Port ( clk25 : in  STD_LOGIC;
 			  audio_out: out STD_LOGIC);
 end audioPlayer;
 
 architecture Behavioral of audioPlayer is
-
+	component player Port ( 
+			  sampleCounter : in  STD_LOGIC_VECTOR(11 downto 0);
+           soundByte : in  STD_LOGIC_VECTOR(7 downto 0);
+			  clk25 : in STD_LOGIC;
+			  audio : out STD_LOGIC);
+	end component;
+	
+	component soundByteSelector Port (
+			  sampleCounter : in  STD_LOGIC_VECTOR(11 downto 0);
+			  clk25 : in STD_LOGIC;
+           soundByte : out  STD_LOGIC_VECTOR(7 downto 0));
+	end component;
+	
+	signal sampleCounter : STD_LOGIC_VECTOR(11 downto 0) := (others => '0');
+	signal soundByte : STD_LOGIC_VECTOR(7 downto 0);
 begin
 
-
+	SB : soundByteSelector port map(sampleCounter, clk25, soundByte);
+	PL : player port map(sampleCounter, soundByte, clk25, audio_out);
+	process(clk25) begin
+		if (rising_edge(clk25)) then
+			if (sampleCounter >= 3125) then
+				sampleCounter <= (others => '0');
+			else
+				sampleCounter <= sampleCounter + 1;
+			end if;
+		end if;
+	end process;
 end Behavioral;
 
