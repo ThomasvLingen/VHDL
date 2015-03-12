@@ -470,9 +470,7 @@ begin
 				if(currentByte > soundLength) then
 					currentByte := 0;
 				end if;
-				
 				soundByte <= Sound(currentByte);
-				
 				currentByte := currentByte + 1;
 			end if;
 		end if;		

@@ -51,7 +51,8 @@ begin
 			end if;
 			
 			if(sampleCounter >= 3125) then
-				counter := (others => '0');
+				--lolwut
+				--counter := (others => '0');
 			else
 				counter := counter + 1;
 			end if;
