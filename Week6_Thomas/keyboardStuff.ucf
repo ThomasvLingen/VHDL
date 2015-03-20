@@ -1,0 +1,3 @@
+NET KeyCLK LOC = B1;
+NET clk25 LOC = M6;
+NET buffCLK LOC = G1;
