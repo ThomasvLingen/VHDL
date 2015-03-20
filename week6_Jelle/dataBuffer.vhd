@@ -37,45 +37,47 @@ entity dataBuffer is
 end dataBuffer;
 
 architecture Behavioral of dataBuffer is
+
 begin
 	process(keyData, clkBuff)
 		variable startBit : STD_LOGIC := '0';
-		variable F0Bit : STD_LOGIC := '1';
-		variable PBit : STD_LOGIC := '1';
+		variable F0Bit : STD_LOGIC := '0';
+		variable PBit : STD_LOGIC := '0';
 		variable enable: STD_LOGIC := '0';
 		variable buffCounter : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 		variable scancode : STD_LOGIC_VECTOR(7 downto 0) := "00000000";
 	begin
-		if (rising_edge(clkBuff)) then	
-			enable := '0';
-			if ((keyData = '0') and (buffCounter = 0)) then
+		if (falling_edge(clkBuff)) then	
+			if(startBit = '0') then
 				startBit := '1';
-			end if;
-			if (startBit = '1') then
-				if (buffCounter = 8) then
-					if (PBit = '1') then
+				buffCounter := "0000";
+				PBit := '0';
+				enableOut <= '0';
+				scancode := "00000000";
+			else
+				if (buffCounter < 8) then
+					if(PBit = '0') then
+						PBit := '1';
+					else
 						if (scancode = x"F0") then
-							F0Bit := '1';
+							F0Bit := '1';	
 						else
 							if (F0Bit = '1') then
 								scancodeOut <= scancode;
-								enable := '1';
-							end if;
-						end if;
-						buffCounter := (others => '0');
+								enableOut <= '1';
+								F0Bit := '0';
+							end if ;
+						end if ;
 						startBit := '0';
-					else
-						PBit := '1';	
 					end if;
 				else
-					scancode(7 downto 1) := scancode(6 downto 0);
-					scancode := scancode + keyData;
+					for i in 0 to 6 loop
+						scancode(i+1) := scancode(i);
+					end loop;
+					scancode(0) := keyData;
 					buffCounter := buffCounter + '1';
-				end if;
+				end if ;
 			end if;
-			enableOut <= enable;
 		end if;
 	end process;
-
 end Behavioral;
-

@@ -42,13 +42,13 @@ architecture Behavioral of counterToRows is
 	begin
 		case counter is
 			when "00" =>
-				rows <= "0001";
+				rows <= "1110";
 			when "01" =>
-				rows <= "0010";
+				rows <= "1101";
 			when "10" =>
-				rows <= "0100";
+				rows <= "1011";
 			when "11" =>
-				rows <= "1000";
+				rows <= "0111";
 			when others =>
 				rows <= "1111";
 		end case;

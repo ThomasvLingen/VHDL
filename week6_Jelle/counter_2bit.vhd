@@ -38,10 +38,10 @@ end counter_2bit;
 
 architecture Behavioral of counter_2bit is
 	constant PRESCALEMAX : integer := 25000;
-	signal counter : STD_LOGIC_VECTOR(1 downto 0);
 begin
 	process(clk25)
 		variable prescaler : integer;
+		variable counter : STD_LOGIC_VECTOR(1 downto 0);
 	begin
 		if(rising_edge(clk25)) then
 			prescaler := prescaler + 1;
@@ -49,12 +49,12 @@ begin
 			if(prescaler >= PRESCALEMAX) then
 				prescaler := 0;
 
-				counter <= counter + 1;
+				counter := counter + 1;
 			end if;
+			
+			counter_out <= counter;
 		end if;
 	end process;
-
-	counter_out <= counter;
 
 end Behavioral;
 
