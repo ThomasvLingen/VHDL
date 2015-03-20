@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    13:22:17 03/16/2015 
+-- Create Date:    11:12:07 03/20/2015 
 -- Design Name: 
--- Module Name:    KeyboadTo7Seg - Behavioral 
+-- Module Name:    dataFilter - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,14 +29,28 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity KeyboadTo7Seg is
-    Port ( clk25 : in  STD_LOGIC);
-end KeyboadTo7Seg;
+entity dataFilter is
+	Port ( KeyData : in  STD_LOGIC;
+		clkSync : in STD_LOGIC;
+        dataOut : out  STD_LOGIC);
+end dataFilter;
 
-architecture Behavioral of KeyboadTo7Seg is
-
+architecture Behavioral of dataFilter is
 begin
-
+	process(KeyData, clkSync)
+		variable startBit : STD_LOGIC;
+		variable buffCounter : STD_LOGIC_VECTOR(7 downto 0);
+	begin
+		if (rising_edge(clkSync)) then	
+			if ((KeyData = '0') and (buffCounter == 0)) then
+				startBit := '1';
+			end if;
+			if (startBit = '1') then
+				
+				buffCounter := buffCounter + '1';
+			end if ;
+		end if ;
+	end process;
 
 end Behavioral;
 

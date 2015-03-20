@@ -1,0 +1,15 @@
+NET "KeyCLK" LOC = B1;
+NET "KeyData" LOC = G1;
+NET "clk25" LOC = M6;
+NET "seg7Out[0]" LOC = L14;
+NET "seg7Out[1]" LOC = H12;
+NET "seg7Out[2]" LOC = N14;
+NET "seg7Out[3]" LOC = N11;
+NET "seg7Out[3]" LOC = P12;
+NET "seg7Out[4]" LOC = L13;
+NET "seg7Out[5]" LOC = M12;
+NET "seg7Out[6]" LOC = N13;
+NET "rows[0]" LOC = K14;
+NET "rows[1]" LOC = M13;
+NET "rows[2]" LOC = J12;
+NET "rows[3]" LOC = F12;
