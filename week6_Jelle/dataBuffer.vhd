@@ -48,36 +48,17 @@ begin
 		variable scancode : STD_LOGIC_VECTOR(7 downto 0) := "00000000";
 	begin
 		if (falling_edge(clkBuff)) then	
-			if(startBit = '0') then
+			if ((keyData = '0') and (startBit = '0')) then
 				startBit := '1';
-				buffCounter := "0000";
-				PBit := '0';
-				enableOut <= '0';
-				scancode := "00000000";
+				enable := '0';
 			else
-				if (buffCounter < 8) then
-					if(PBit = '0') then
-						PBit := '1';
-					else
-						if (scancode = x"F0") then
-							F0Bit := '1';	
-						else
-							if (F0Bit = '1') then
-								scancodeOut <= scancode;
-								enableOut <= '1';
-								F0Bit := '0';
-							end if ;
-						end if ;
-						startBit := '0';
-					end if;
-				else
-					for i in 0 to 6 loop
-						scancode(i+1) := scancode(i);
-					end loop;
-					scancode(0) := keyData;
-					buffCounter := buffCounter + '1';
-				end if ;
-			end if;
+				for i in 0 to 7 loop
+					scancode(i) := keyData;
+				end loop;
+				scancodeOut <= scancode;
+				enable := '1';
+			end if ;
+			enableOut <= enable;
 		end if;
 	end process;
 end Behavioral;
