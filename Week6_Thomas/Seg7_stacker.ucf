@@ -1,0 +1,19 @@
+NET "Seg7_in[0]" LOC = P11;
+NET "Seg7_in[1]" LOC = L3;
+NET "Seg7_in[2]" LOC = K3;
+NET "Seg7_in[3]" LOC = B4;
+NET "Seg7_in[4]" LOC = G3;
+NET "Seg7_in[5]" LOC = F3;
+NET "Seg7_in[6]" LOC = E2;
+
+NET "Enable" LOC = G12;
+
+NET "Seg7_3[0]" LOC = M5;
+NET "Seg7_3[0]" LOC = M11;
+NET "Seg7_3[0]" LOC = P7;
+NET "Seg7_3[0]" LOC = P6;
+NET "Seg7_3[0]" LOC = N5;
+NET "Seg7_3[0]" LOC = N4;
+NET "Seg7_3[0]" LOC = P4;
+
+NET "clk25" LOC = M6;
